@@ -1,0 +1,215 @@
+.style-principles {
+    padding-top: 5rem;
+}
+
+/* Body Types Section */
+.body-types-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.body-type-card {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.body-type-visual {
+    flex: 0 0 40%;
+}
+
+.body-type-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.body-type-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.body-type-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.style-tip-list {
+    padding-left: 1.2rem;
+}
+
+.style-tip-list li {
+    margin-bottom: 0.7rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Color Guide Section */
+.color-guide {
+    background-color: #f9f9f9;
+}
+
+.color-guide-content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.color-wheel-container {
+    flex: 1;
+}
+
+.color-wheel {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+}
+
+.color-wheel-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.color-wheel-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.color-guide-info {
+    flex: 1;
+}
+
+.color-combo {
+    margin-bottom: 2.5rem;
+}
+
+.color-combo:last-child {
+    margin-bottom: 0;
+}
+
+.color-combo h3 {
+    margin-bottom: 0.6rem;
+    font-size: 1.4rem;
+}
+
+.color-combo p {
+    margin-bottom: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.color-combo-example {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.color-swatch {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Dress Codes Section */
+.dress-codes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.dress-code-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dress-code-image {
+    height: 200px;
+}
+
+.dress-code-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dress-code-content {
+    padding: 2rem;
+}
+
+.dress-code-content h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+}
+
+.dress-code-content>p {
+    margin-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.dress-code-examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.dress-code-example h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+}
+
+.dress-code-example ul {
+    padding-left: 1.2rem;
+}
+
+.dress-code-example li {
+    margin-bottom: 0.5rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+
+    .body-types-grid,
+    .dress-codes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .color-guide-content {
+        flex-direction: column;
+    }
+
+    .color-wheel {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .body-type-card {
+        flex-direction: column;
+    }
+
+    .body-type-visual {
+        height: 200px;
+    }
+
+    .dress-code-examples {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

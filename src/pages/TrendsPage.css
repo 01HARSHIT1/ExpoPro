@@ -1,0 +1,175 @@
+.seasonal-trends {
+    padding-top: 5rem;
+}
+
+/* Trend Report Section */
+.trend-report-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.trend-report-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.trend-report-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.trend-report-description {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Trend Category Tabs */
+.tab-buttons {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #777;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.tab-button.active {
+    color: #121212;
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #121212;
+}
+
+.tab-button:hover {
+    color: #121212;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.trend-category-item {
+    margin-bottom: 2rem;
+}
+
+.trend-category-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.trend-category-item h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.trend-category-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Celebrity Style */
+.celebrity-style-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+    height: 550px;
+}
+
+.celebrity-style-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.celebrity-style-card.large {
+    grid-row: span 2;
+}
+
+.celebrity-style-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.celebrity-style-card:hover img {
+    transform: scale(1.05);
+}
+
+.celebrity-style-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    color: white;
+}
+
+.celebrity-style-overlay h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.celebrity-style-overlay p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+    .trend-report-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .celebrity-style-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .celebrity-style-card {
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tab-buttons {
+        flex-wrap: wrap;
+    }
+
+    .tab-button {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+}
